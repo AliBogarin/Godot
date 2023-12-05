@@ -27,7 +27,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=4]
 resource_name = "Walk"
 length = 1.5
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -42,19 +41,22 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 4, 4.5 )
+extents = Vector2( 4.5, 4.75 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 5, 5.5 )
+extents = Vector2( 5.5, 5.25 )
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+rotation = -6.28319
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 light_mask = 4
 position = Vector2( 0.5, 5.96046e-08 )
+rotation = -0.00349066
 scale = Vector2( 0.53125, 0.625 )
 texture = ExtResource( 1 )
+flip_h = true
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -64,17 +66,17 @@ anims/RESET = SubResource( 3 )
 anims/Walk = SubResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 5.5 )
+position = Vector2( 0.499999, 5.25 )
 shape = SubResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 4.5 )
+position = Vector2( 0.499999, 4.75 )
 shape = SubResource( 7 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( -7, 1 )
+position = Vector2( -6, 3.55271e-15 )
 scale = Vector2( 0.2, 0.2 )
 enabled = true
 cast_to = Vector2( 3.8147e-06, 55 )

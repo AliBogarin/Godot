@@ -1,7 +1,7 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Escena/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Escena/Saw.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/tree.png" type="Texture" id=2]
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Backgrounds/mountains_a.png" type="Texture" id=3]
 [ext_resource path="res://DecoracionesVarias/generic_platformer_tiles.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/ZonaCaida.gd" type="Script" id=5]
@@ -12,15 +12,30 @@
 [ext_resource path="res://DecoracionesVarias/TileSet_Gras_Works.png" type="Texture" id=10]
 [ext_resource path="res://DecoracionesVarias/blue_sky.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Coins_Colection.gd" type="Script" id=12]
-[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Objects/heart.png" type="Texture" id=13]
+[ext_resource path="res://Escena/Coins.tscn" type="PackedScene" id=13]
 [ext_resource path="res://DecoracionesVarias/mylevel1_tiles.png" type="Texture" id=14]
-[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Enemies/ice_spikes.png" type="Texture" id=15]
-[ext_resource path="res://Escena/Coins.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/tree_trunk.png" type="Texture" id=15]
 [ext_resource path="res://Escena/Penguin.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Backgrounds/clouds.png" type="Texture" id=18]
-[ext_resource path="res://Escena/PauseMenu.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/clouds.png" type="Texture" id=20]
-[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Backgrounds/trees.png" type="Texture" id=21]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Enemies/cactus.png" type="Texture" id=19]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Objects/heart.png" type="Texture" id=20]
+[ext_resource path="res://Escena/PauseMenu.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Tilesets/tileset_water.png" type="Texture" id=22]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/sign.png" type="Texture" id=23]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Backgrounds/trees.png" type="Texture" id=24]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/bush.png" type="Texture" id=25]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/clouds.png" type="Texture" id=26]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/tree_b.png" type="Texture" id=27]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.321569, 0.105882, 0.141176, 0.282353 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 330.156, 53.5 )
 
 [sub_resource type="ConvexPolygonShape2D" id=54]
 points = PoolVector2Array( 1.04109, 14.7155, 2.00557, 14.2332, 5.38136, 7.96393, 6.82811, 13.2687, 7.79262, 12.7865, 10.6861, 6.99942, 13.5797, 12.7865 )
@@ -28,8 +43,11 @@ points = PoolVector2Array( 1.04109, 14.7155, 2.00557, 14.2332, 5.38136, 7.96393,
 [sub_resource type="ConvexPolygonShape2D" id=56]
 points = PoolVector2Array( 9.41069, 6.99942, 9.89293, 7.48169, 6.9994, 8.92844 )
 
-[sub_resource type="ConvexPolygonShape2D" id=74]
-points = PoolVector2Array( 9.25, 7.25, 16, 16, 9.25, 14.25, 0, 12.25, 1.25, 3.25, 14.25, 14.25, 0, 4.25 )
+[sub_resource type="ConvexPolygonShape2D" id=65]
+points = PoolVector2Array( 16, 16.0244, 15.5606, 31.3738, 0.21109, 31.0948, 0, 17.6989, 8.58354, 12.3963, 8.58354, 12.3963 )
+
+[sub_resource type="ConvexPolygonShape2D" id=66]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="TileSet" id=55]
 0/name = "spikes.png 0"
@@ -116,48 +134,48 @@ points = PoolVector2Array( 9.25, 7.25, 16, 16, 9.25, 14.25, 0, 12.25, 1.25, 3.25
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
-5/name = "ice_spikes.png 5"
-5/texture = ExtResource( 15 )
+5/name = "cactus.png 5"
+5/texture = ExtResource( 19 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 16, 16 )
+5/region = Rect2( 160, 0, 32, 32 )
 5/tile_mode = 0
 5/occluder_offset = Vector2( 0, 0 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 74 )
+5/shape = SubResource( 65 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 74 ),
+"shape": SubResource( 65 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
-6/name = "ice_spikes.png 6"
-6/texture = ExtResource( 15 )
+6/name = "cactus.png 6"
+6/texture = ExtResource( 19 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 16, 0, 16, 16 )
+6/region = Rect2( 96, 0, 32, 32 )
 6/tile_mode = 0
 6/occluder_offset = Vector2( 0, 0 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 66 )
 6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 66 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 6/z_index = 0
-
-[sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 0.321569, 0.105882, 0.141176, 0.282353 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
 points = PoolVector2Array( 96, 32, 0, 32, 0, 0, 96, 0 )
@@ -211,12 +229,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=64]
-points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
-
-[sub_resource type="ConvexPolygonShape2D" id=65]
-points = PoolVector2Array( 16, 16.0244, 15.5606, 31.3738, 0.21109, 31.0948, 0, 17.6989, 8.58354, 12.3963, 8.58354, 12.3963 )
-
-[sub_resource type="ConvexPolygonShape2D" id=66]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=67]
@@ -1100,7 +1112,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 44/shapes = [  ]
 44/z_index = 0
 45/name = "clouds.png 45"
-45/texture = ExtResource( 20 )
+45/texture = ExtResource( 26 )
 45/tex_offset = Vector2( 0, 0 )
 45/modulate = Color( 1, 1, 1, 1 )
 45/region = Rect2( 0, 16, 16, 16 )
@@ -1114,7 +1126,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 45/shapes = [  ]
 45/z_index = 0
 46/name = "clouds.png 46"
-46/texture = ExtResource( 20 )
+46/texture = ExtResource( 26 )
 46/tex_offset = Vector2( 0, 0 )
 46/modulate = Color( 1, 1, 1, 1 )
 46/region = Rect2( 16, 16, 16, 16 )
@@ -1128,7 +1140,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 46/shapes = [  ]
 46/z_index = 0
 47/name = "clouds.png 47"
-47/texture = ExtResource( 20 )
+47/texture = ExtResource( 26 )
 47/tex_offset = Vector2( 0, 0 )
 47/modulate = Color( 1, 1, 1, 1 )
 47/region = Rect2( 32, 16, 16, 16 )
@@ -1142,7 +1154,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 47/shapes = [  ]
 47/z_index = 0
 48/name = "clouds.png 48"
-48/texture = ExtResource( 20 )
+48/texture = ExtResource( 26 )
 48/tex_offset = Vector2( 0, 0 )
 48/modulate = Color( 1, 1, 1, 1 )
 48/region = Rect2( 0, 32, 48, 16 )
@@ -1211,32 +1223,100 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 52/shape_one_way_margin = 0.0
 52/shapes = [  ]
 52/z_index = 0
+53/name = "tileset_water.png 53"
+53/texture = ExtResource( 22 )
+53/tex_offset = Vector2( 0, 0 )
+53/modulate = Color( 1, 1, 1, 1 )
+53/region = Rect2( 48, 16, 16, 16 )
+53/tile_mode = 0
+53/occluder_offset = Vector2( 0, 0 )
+53/navigation_offset = Vector2( 0, 0 )
+53/shape_offset = Vector2( 0, 0 )
+53/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+53/shape_one_way = false
+53/shape_one_way_margin = 0.0
+53/shapes = [  ]
+53/z_index = 0
+54/name = "tileset_water.png 54"
+54/texture = ExtResource( 22 )
+54/tex_offset = Vector2( 0, 0 )
+54/modulate = Color( 1, 1, 1, 1 )
+54/region = Rect2( 48, 16, 16, 16 )
+54/tile_mode = 0
+54/occluder_offset = Vector2( 0, 0 )
+54/navigation_offset = Vector2( 0, 0 )
+54/shape_offset = Vector2( 0, 0 )
+54/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+54/shape_one_way = false
+54/shape_one_way_margin = 0.0
+54/shapes = [  ]
+54/z_index = 0
+55/name = "tileset_snow.png 55"
+55/texture = ExtResource( 7 )
+55/tex_offset = Vector2( 0, 0 )
+55/modulate = Color( 1, 1, 1, 1 )
+55/region = Rect2( 48, 48, 16, 16 )
+55/tile_mode = 0
+55/occluder_offset = Vector2( 0, 0 )
+55/navigation_offset = Vector2( 0, 0 )
+55/shape_offset = Vector2( 0, 0 )
+55/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+55/shape_one_way = false
+55/shape_one_way_margin = 0.0
+55/shapes = [  ]
+55/z_index = 0
+56/name = "clouds.png 56"
+56/texture = ExtResource( 26 )
+56/tex_offset = Vector2( 0, 0 )
+56/modulate = Color( 1, 1, 1, 1 )
+56/region = Rect2( 0, 0, 48, 16 )
+56/tile_mode = 0
+56/occluder_offset = Vector2( 0, 0 )
+56/navigation_offset = Vector2( 0, 0 )
+56/shape_offset = Vector2( 0, 0 )
+56/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+56/shape_one_way = false
+56/shape_one_way_margin = 0.0
+56/shapes = [  ]
+56/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=57]
-extents = Vector2( 210.703, 63.4276 )
+[node name="Mundo3" type="Node2D"]
 
-[node name="Mundo4" type="Node2D"]
-scale = Vector2( 1.75603, 1.6712 )
-
-[node name="ZonaCaida" type="Area2D" parent="."]
-script = ExtResource( 5 )
-
-[node name="BlueSky" type="Sprite" parent="ZonaCaida"]
-position = Vector2( 137.811, 96.9363 )
+[node name="BlueSky" type="Sprite" parent="."]
+position = Vector2( 282, 164 )
+scale = Vector2( 1.23333, 1.05556 )
 texture = ExtResource( 11 )
 
-[node name="Spike" type="Area2D" parent="."]
+[node name="Clouds" type="Sprite" parent="BlueSky"]
+position = Vector2( -3.24322, -23.6842 )
+scale = Vector2( 1.77027, 3.04497 )
+texture = ExtResource( 18 )
 
-[node name="Saw" parent="Spike" instance=ExtResource( 2 )]
-position = Vector2( -60.3634, 92.7477 )
+[node name="MountainsA" type="Sprite" parent="BlueSky"]
+position = Vector2( -11.3513, -82.4211 )
+scale = Vector2( 1.7671, 1.35115 )
+texture = ExtResource( 3 )
 
-[node name="TileMap" type="TileMap" parent="Spike"]
-tile_set = SubResource( 55 )
-cell_size = Vector2( 16, 16 )
-cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
-collision_use_parent = true
-format = 1
-tile_data = PoolIntArray( 1048609, 0, 0, 1048614, 0, 0, 1114142, 0, 0, 1114150, 0, 0, 2097185, 0, 0, 2162721, 0, 0, 2228257, 0, 0, 2293793, 0, 0, 2359329, 0, 0, 2424864, 0, 0, 2424865, 0, 0, 2490400, 0, 0, 2490402, 0, 0, 2555936, 0, 0, 2555938, 0, 0, 2621472, 0, 0, 2621474, 0, 0, 2687008, 0, 0, 2687010, 0, 0, 2752544, 0, 0, 2752546, 0, 0, 2818079, 0, 0, 2818083, 0, 0, 2883615, 0, 0, 2883619, 0, 0, 2949151, 0, 0, 2949155, 0, 0, 3014691, 0, 0, 3080227, 0, 0, 3145763, 0, 0, 3211299, 0, 0, 3276835, 0, 0, 3342371, 0, 0, 3407908, 0, 0, 3473444, 0, 0, 3538980, 0, 0, 3604516, 0, 0, 3670052, 0, 0, 3735588, 0, 0, 3801124, 0, 0, 3866661, 0, 0, 3932173, 0, 0, 3932197, 0, 0, 3997709, 0, 0, 3997733, 0, 0, 4063245, 0, 0, 4063269, 0, 0, 4128780, 0, 0, 4128781, 0, 0, 4128805, 0, 0, 4194316, 0, 0, 4194341, 0, 0, 4259852, 0, 0, 4259877, 0, 0, 4325388, 0, 0, 4325413, 0, 0, 4390924, 0, 0, 4390949, 0, 0, 4456460, 0, 0, 4456485, 0, 0, 4521996, 0, 0, 4522021, 0, 0, 4587532, 0, 0, 4587557, 0, 0, 4653068, 0, 0, 4653094, 0, 0, 4653095, 0, 0 )
+[node name="Trees" type="Sprite" parent="BlueSky/MountainsA"]
+position = Vector2( 1.37649, 35.0578 )
+scale = Vector2( 1.03689, 1 )
+texture = ExtResource( 24 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 263, 144 )
+scale = Vector2( 1, 1 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_left = 0
+limit_top = 0
+limit_right = 520
+limit_bottom = 600
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 4.0
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 241, 151 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enable = true
@@ -1245,8 +1325,8 @@ script = ExtResource( 12 )
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 margin_left = 2.0
 margin_top = 4.0
-margin_right = 40.0
-margin_bottom = 21.0
+margin_right = 39.0
+margin_bottom = 20.0
 custom_styles/panel = SubResource( 13 )
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
@@ -1255,107 +1335,134 @@ texture = ExtResource( 8 )
 hframes = 6
 
 [node name="Heart1" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 63, 12 )
-scale = Vector2( 1.4375, 1.25 )
-texture = ExtResource( 13 )
+position = Vector2( 56, 13 )
+texture = ExtResource( 20 )
 hframes = 3
 
 [node name="Heart2" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 82, 12 )
-scale = Vector2( 1.4375, 1.25 )
-texture = ExtResource( 13 )
+position = Vector2( 70, 13 )
+texture = ExtResource( 20 )
 hframes = 3
 
 [node name="Heart3" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 102, 12 )
-scale = Vector2( 1.4375, 1.25 )
-texture = ExtResource( 13 )
+position = Vector2( 84.5, 13 )
+scale = Vector2( 1.0625, 1 )
+texture = ExtResource( 20 )
 hframes = 3
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 7.0
+margin_left = 16.0
 margin_top = 5.0
-margin_right = 28.0
+margin_right = 37.0
 margin_bottom = 19.0
-rect_scale = Vector2( 1.03407, 0.979823 )
 text = ":"
 
 [node name="Coins_Colection_text" type="Label" parent="CanvasLayer"]
 anchor_bottom = 0.012
-margin_left = 20.0
+margin_left = 19.0
 margin_top = 6.0
 margin_right = 39.0
-margin_bottom = 12.8
+margin_bottom = 14.8
 text = "00"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 144.075, 84.9689 )
-current = true
-zoom = Vector2( 0.5, 0.5 )
-limit_left = 0
-limit_top = 0
-limit_right = 520
-limit_bottom = 600
+[node name="ZonaCaida" type="Area2D" parent="."]
+position = Vector2( 14, 0 )
+script = ExtResource( 5 )
 
-[node name="MountainsA" type="Sprite" parent="."]
-position = Vector2( 148.631, 28.7219 )
-scale = Vector2( 1.19899, 0.673068 )
-texture = ExtResource( 3 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaCaida"]
+position = Vector2( 290, 360 )
+shape = SubResource( 34 )
 
-[node name="Clouds" type="Sprite" parent="."]
-position = Vector2( 154.325, 99.3298 )
-scale = Vector2( 1.27685, 1.44207 )
-texture = ExtResource( 18 )
+[node name="Spike" type="Area2D" parent="."]
+position = Vector2( 195, 22 )
 
-[node name="Trees" type="Sprite" parent="."]
-position = Vector2( 155.464, 56.1754 )
-scale = Vector2( 1.27685, 1.51575 )
-texture = ExtResource( 21 )
+[node name="TileMap" type="TileMap" parent="Spike"]
+position = Vector2( 21, 13 )
+tile_set = SubResource( 55 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
+collision_use_parent = true
+format = 1
+tile_data = PoolIntArray( 1835052, 4, 0, 1835053, 4, 0, 1835054, 4, 0, 1835055, 4, 0, 1835056, 4, 0, 1835057, 4, 0, 1835058, 4, 0 )
 
-[node name="Penguin" parent="." instance=ExtResource( 17 )]
-position = Vector2( 39.2932, 87.9607 )
+[node name="Pinguin" parent="." instance=ExtResource( 17 )]
+position = Vector2( 420, 103 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 138.95, 70.0096 )
+[node name="Coins" parent="." instance=ExtResource( 13 )]
+position = Vector2( 109, 174 )
 
-[node name="PauseMenu" parent="." instance=ExtResource( 19 )]
-margin_left = 130.977
-margin_top = 109.502
-margin_right = 154.977
-margin_bottom = 126.502
+[node name="Coins2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 174, 36 )
+
+[node name="Coins3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 249, 69 )
+
+[node name="Coins4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 227, 144 )
+
+[node name="Coins5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 70, 86 )
+
+[node name="Coins6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 70, 236 )
+
+[node name="Coins7" parent="." instance=ExtResource( 13 )]
+position = Vector2( 483, 92 )
+
+[node name="Coins8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 371, 65 )
+
+[node name="Coins9" parent="." instance=ExtResource( 13 )]
+position = Vector2( 464, 197 )
+
+[node name="Coins10" parent="." instance=ExtResource( 13 )]
+position = Vector2( 238, 245 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( -1.00001, 2.00001 )
+position = Vector2( -1, 2 )
 tile_set = SubResource( 49 )
 cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 collision_layer = 4
 format = 1
-tile_data = PoolIntArray( 6, 48, 0, 14, 48, 0, 131071, 48, 0, 65538, 48, 0, 65542, 30, 0, 65543, 30, 0, 65544, 30, 0, 65549, 45, 0, 65550, 47, 0, 65553, 48, 0, 131080, 48, 0, 196610, 30, 0, 196611, 30, 0, 196612, 30, 0, 196613, 30, 0, 196618, 30, 0, 196619, 30, 0, 196620, 30, 0, 196625, 26, 0, 262159, 39, 0, 262160, 39, 0, 327687, 30, 0, 327688, 30, 0, 327689, 30, 0, 393218, 30, 0, 393219, 30, 0, 393220, 30, 0, 524288, 31, 0, 524290, 37, 0, 524300, 37, 0, 524304, 33, 0, 524305, 28, 0, 524306, 28, 0, 524307, 32, 0, 589824, 33, 0, 589825, 28, 0, 589826, 29, 0, 589830, 27, 0, 589831, 29, 0, 589834, 33, 0, 589835, 30, 0, 589840, 42, 0, 589841, 34, 0, 589842, 34, 0, 589843, 43, 0, 655360, 52, 0, 655361, 34, 0, 655362, 43, 0, 655370, 52, 0, 655372, 43, 0, 655377, 34, 0, 655378, 34, 0, 720896, 51, 0, 720897, 50, 0, 720898, 49, 0, 720912, 50, 0, 720913, 50, 0, 720914, 50, 0, 720915, 50, 0, 2424880, 17, 0 )
+tile_data = PoolIntArray( 12, 48, 0, 65541, 48, 0, 65553, 56, 0, 65554, 56, 0, 65555, 56, 0, 131072, 56, 0, 196618, 30, 0, 196619, 30, 0, 196620, 30, 0, 196637, 48, 0, 262169, 48, 0, 327683, 26, 0, 327695, 30, 0, 327696, 30, 0, 327697, 30, 0, 327698, 30, 0, 327702, 27, 0, 327703, 28, 0, 327704, 29, 0, 393219, 38, 0, 393220, 38, 0, 393226, 48, 0, 458753, 48, 0, 458777, 38, 0, 458778, 38, 0, 458779, 38, 0, 458780, 38, 0, 458781, 38, 0, 524307, 30, 0, 524308, 30, 0, 524309, 30, 0, 524310, 30, 0, 655373, 27, 0, 655374, 28, 0, 655375, 28, 0, 655376, 29, 0, 720909, 38, 0, 786438, 30, 0, 786439, 30, 0, 786440, 30, 0, 786441, 30, 0, 786442, 30, 0, 786462, 37, 0, 851974, 38, 0, 851995, 33, 0, 851996, 28, 0, 851997, 28, 0, 851998, 37, 0, 917523, 27, 0, 917524, 28, 0, 917525, 29, 0, 917528, 28, 0, 917529, 28, 0, 917530, 28, 0, 917531, 32, 0, 917532, 35, 0, 917533, 34, 0, 917534, 42, 0, 983040, 32, 0, 983041, 30, 0, 983042, 30, 0, 983043, 30, 0, 983044, 32, 0, 983064, 42, 0, 983065, 34, 0, 983066, 55, 0, 983067, 34, 0, 983068, 34, 0, 983069, 34, 0, 983070, 42, 0, 1048576, 43, 0, 1048577, 34, 0, 1048578, 34, 0, 1048579, 34, 0, 1048580, 43, 0, 1048589, 27, 0, 1048590, 28, 0, 1048591, 28, 0, 1048592, 29, 0, 1048600, 42, 0, 1048601, 34, 0, 1048602, 34, 0, 1048603, 55, 0, 1048604, 34, 0, 1048605, 34, 0, 1048606, 43, 0, 1114112, 52, 0, 1114114, 34, 0, 1114115, 55, 0, 1114116, 43, 0, 1114125, 42, 0, 1114126, 35, 0, 1114127, 36, 0, 1114128, 43, 0, 1114137, 34, 0, 1114138, 55, 0, 1114139, 55, 0, 1114140, 34, 0, 1114141, 34, 0, 1179650, 51, 0, 1179651, 51, 0, 1179662, 34, 0, 1179663, 34, 0, 1179672, 1610612768, 0, 1179673, 34, 0, 1179674, 34, 0, 1179675, 55, 0, 1179676, 34, 0, 1179677, 34, 0, 1179678, 1610612769, 0 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 154.895, 219.004 )
-shape = SubResource( 57 )
+[node name="PauseMenu" parent="TileMap" instance=ExtResource( 21 )]
+margin_left = 236.0
+margin_top = 120.0
+margin_right = 262.0
+margin_bottom = 136.0
 
-[node name="Coins" parent="CollisionShape2D" instance=ExtResource( 16 )]
-position = Vector2( -140.658, -89.7558 )
+[node name="Sign" type="Sprite" parent="TileMap"]
+position = Vector2( 512, 96 )
+texture = ExtResource( 23 )
 
-[node name="Coins2" parent="CollisionShape2D" instance=ExtResource( 16 )]
-position = Vector2( -113.893, -182.504 )
+[node name="Bush" type="Sprite" parent="TileMap"]
+position = Vector2( 17, 233 )
+texture = ExtResource( 25 )
 
-[node name="Coins3" parent="CollisionShape2D" instance=ExtResource( 16 )]
-position = Vector2( -23.3481, -206.438 )
+[node name="Tree" type="Sprite" parent="TileMap"]
+position = Vector2( 34, 183 )
+texture = ExtResource( 2 )
 
-[node name="Coins4" parent="CollisionShape2D" instance=ExtResource( 16 )]
-position = Vector2( -50.113, -89.1575 )
+[node name="TreeB" type="Sprite" parent="TileMap"]
+position = Vector2( 361, 190 )
+texture = ExtResource( 27 )
 
-[node name="Coins5" parent="CollisionShape2D" instance=ExtResource( 16 )]
-position = Vector2( 26.7649, -83.7721 )
+[node name="TreeTrunk" type="Sprite" parent="TileMap"]
+position = Vector2( 134, 257 )
+texture = ExtResource( 15 )
 
-[node name="Coins6" parent="CollisionShape2D" instance=ExtResource( 16 )]
-position = Vector2( 95.6703, -166.946 )
+[node name="TreeTrunk2" type="Sprite" parent="TileMap"]
+position = Vector2( 353, 224 )
+texture = ExtResource( 15 )
 
-[node name="Coins7" parent="CollisionShape2D" instance=ExtResource( 16 )]
-position = Vector2( 142.936, -113.092 )
+[node name="TreeTrunk3" type="Sprite" parent="TileMap"]
+position = Vector2( 55, 223 )
+texture = ExtResource( 15 )
+
+[node name="Coins" parent="TileMap" instance=ExtResource( 13 )]
+position = Vector2( 346, 107 )
 
 [connection signal="body_entered" from="ZonaCaida" to="ZonaCaida" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Spike" to="Player" method="_on_Spike_body_entered"]

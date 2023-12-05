@@ -615,9 +615,6 @@ collision_layer = 4
 format = 1
 tile_data = PoolIntArray( -393215, 28, 0, -327679, 11, 0, -327678, 11, 0, -327677, 11, 0, -327676, 11, 0, -327665, 21, 0, -262130, 11, 0, -262129, 11, 0, -262128, 11, 0, -262127, 11, 0, -196585, 11, 0, -196584, 11, 0, -196583, 11, 0, -196582, 11, 0, -196581, 11, 0, -196580, 11, 0, -131062, 11, 0, 65543, 11, 0, 131089, 11, 0, 262145, 19, 0, 262148, 11, 0, 262156, 11, 0, 327688, 28, 0, 327709, 20, 0, 393224, 11, 0, 393241, 23, 0, 393242, 26, 0, 393243, 26, 0, 393244, 26, 0, 393245, 26, 0, 393246, 24, 0, 524287, 23, 0, 458752, 26, 0, 458753, 26, 0, 458754, 26, 0, 458755, 26, 0, 458756, 24, 0, 458777, 8, 0, 589823, 8, 0, 524301, 23, 0, 524302, 26, 0, 524303, 26, 0, 524304, 26, 0, 524305, 26, 0, 524306, 24, 0, 524309, 23, 0, 524310, 24, 0, 524313, 8, 0, 655359, 8, 0, 589824, 13, 0, 589825, 13, 0, 589826, 14, 0, 589827, 14, 0, 589832, 23, 0, 589833, 24, 0, 589837, 8, 0, 589849, 8, 0, 589850, 8, 0, 720895, 8, 0, 655373, 8, 0, 655374, 22, 0, 655376, 22, 0, 1441877, 3, 0, 3407861, 0, 0, 3473397, 0, 0, 4718298, 23, 0, 4915269, 8, 0 )
 
-[node name="Coins" parent="TileMap" instance=ExtResource( 2 )]
-position = Vector2( 427.466, 72.7382 )
-
 [node name="PauseMenu" parent="." instance=ExtResource( 13 )]
 pause_mode = 2
 margin_left = 212.0
@@ -631,21 +628,27 @@ position = Vector2( 485, 80 )
 [node name="Coins" parent="." instance=ExtResource( 2 )]
 position = Vector2( 28, 197 )
 
-[node name="Coins2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 202, 173 )
+[node name="Coins4" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 408, -132 )
 
-[node name="Coins7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 285, 51 )
+[node name="Coins3" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 125, 17 )
+scale = Vector2( 1, 1 )
+
+[node name="Coins5" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 233, -92 )
+scale = Vector2( 1, 1 )
+
+[node name="Coins" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 404, 15.0001 )
 scale = Vector2( 0.99891, 1.0036 )
 
-[node name="Coins3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 153, 214 )
+[node name="Coins7" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 257, -146 )
+scale = Vector2( 0.99891, 1.0036 )
 
-[node name="Coins4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 436, 65 )
-
-[node name="Coins5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 261, 105 )
+[node name="Coins2" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 174, -24 )
 
 [node name="Coins6" parent="." instance=ExtResource( 2 )]
 position = Vector2( 82, 181 )

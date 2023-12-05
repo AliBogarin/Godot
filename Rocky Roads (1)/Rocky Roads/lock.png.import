@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lock.png-5ad61cd059d11c269fe44edfb9f571c6.stex"
+path="res://.import/lock.png-1479c5c99d47331f34f1c83b9143b19c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rocky Roads (1)/Rocky Roads/Tilesets/lock.png"
-dest_files=[ "res://.import/lock.png-5ad61cd059d11c269fe44edfb9f571c6.stex" ]
+source_file="res://Rocky Roads (1)/Rocky Roads/lock.png"
+dest_files=[ "res://.import/lock.png-1479c5c99d47331f34f1c83b9143b19c.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sign.png-02eb7d2f2c785f278f096ae232f45560.stex"
+path="res://.import/sign.png-6bfbb9d2c6b7af18463ab7597ac61d2d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rocky Roads (1)/Rocky Roads/Tilesets/sign.png"
-dest_files=[ "res://.import/sign.png-02eb7d2f2c785f278f096ae232f45560.stex" ]
+source_file="res://Rocky Roads (1)/Rocky Roads/sign.png"
+dest_files=[ "res://.import/sign.png-6bfbb9d2c6b7af18463ab7597ac61d2d.stex" ]
 
 [params]
 
