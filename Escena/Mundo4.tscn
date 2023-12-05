@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Escena/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escena/Saw.tscn" type="PackedScene" id=2]
@@ -17,10 +17,147 @@
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Enemies/ice_spikes.png" type="Texture" id=15]
 [ext_resource path="res://Escena/Coins.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Escena/Penguin.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Backgrounds/clouds.png" type="Texture" id=18]
 [ext_resource path="res://Escena/PauseMenu.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/clouds.png" type="Texture" id=20]
+[ext_resource path="res://Rocky Roads (1)/Rocky Roads/Backgrounds/trees.png" type="Texture" id=21]
 
-[sub_resource type="RectangleShape2D" id=57]
-extents = Vector2( 210.703, 63.4276 )
+[sub_resource type="ConvexPolygonShape2D" id=54]
+points = PoolVector2Array( 1.04109, 14.7155, 2.00557, 14.2332, 5.38136, 7.96393, 6.82811, 13.2687, 7.79262, 12.7865, 10.6861, 6.99942, 13.5797, 12.7865 )
+
+[sub_resource type="ConvexPolygonShape2D" id=56]
+points = PoolVector2Array( 9.41069, 6.99942, 9.89293, 7.48169, 6.9994, 8.92844 )
+
+[sub_resource type="ConvexPolygonShape2D" id=74]
+points = PoolVector2Array( 9.25, 7.25, 16, 16, 9.25, 14.25, 0, 12.25, 1.25, 3.25, 14.25, 14.25, 0, 4.25 )
+
+[sub_resource type="TileSet" id=55]
+0/name = "spikes.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 42, 14, 0, 3 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "spikes.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 54 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 54 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "spikes.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 25, 6, 0, 0 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "spikes.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 48, 0, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "cactus_spike.png 4"
+4/texture = ExtResource( 9 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 56 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 56 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "ice_spikes.png 5"
+5/texture = ExtResource( 15 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 74 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 74 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "ice_spikes.png 6"
+6/texture = ExtResource( 15 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 16, 0, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.321569, 0.105882, 0.141176, 0.282353 )
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
 points = PoolVector2Array( 96, 32, 0, 32, 0, 0, 96, 0 )
@@ -962,143 +1099,121 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 44/shape_one_way_margin = 0.0
 44/shapes = [  ]
 44/z_index = 0
+45/name = "clouds.png 45"
+45/texture = ExtResource( 20 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 0, 16, 16, 16 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 0, 0 )
+45/navigation_offset = Vector2( 0, 0 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape_one_way = false
+45/shape_one_way_margin = 0.0
+45/shapes = [  ]
+45/z_index = 0
+46/name = "clouds.png 46"
+46/texture = ExtResource( 20 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 16, 16, 16, 16 )
+46/tile_mode = 0
+46/occluder_offset = Vector2( 0, 0 )
+46/navigation_offset = Vector2( 0, 0 )
+46/shape_offset = Vector2( 0, 0 )
+46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+46/shape_one_way = false
+46/shape_one_way_margin = 0.0
+46/shapes = [  ]
+46/z_index = 0
+47/name = "clouds.png 47"
+47/texture = ExtResource( 20 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 32, 16, 16, 16 )
+47/tile_mode = 0
+47/occluder_offset = Vector2( 0, 0 )
+47/navigation_offset = Vector2( 0, 0 )
+47/shape_offset = Vector2( 0, 0 )
+47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape_one_way = false
+47/shape_one_way_margin = 0.0
+47/shapes = [  ]
+47/z_index = 0
+48/name = "clouds.png 48"
+48/texture = ExtResource( 20 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 0, 32, 48, 16 )
+48/tile_mode = 0
+48/occluder_offset = Vector2( 0, 0 )
+48/navigation_offset = Vector2( 0, 0 )
+48/shape_offset = Vector2( 0, 0 )
+48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+48/shape_one_way = false
+48/shape_one_way_margin = 0.0
+48/shapes = [  ]
+48/z_index = 0
+49/name = "tileset_snow.png 49"
+49/texture = ExtResource( 7 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 32, 64, 16, 16 )
+49/tile_mode = 0
+49/occluder_offset = Vector2( 0, 0 )
+49/navigation_offset = Vector2( 0, 0 )
+49/shape_offset = Vector2( 0, 0 )
+49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+49/shape_one_way = false
+49/shape_one_way_margin = 0.0
+49/shapes = [  ]
+49/z_index = 0
+50/name = "tileset_snow.png 50"
+50/texture = ExtResource( 7 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 48, 64, 16, 16 )
+50/tile_mode = 0
+50/occluder_offset = Vector2( 0, 0 )
+50/navigation_offset = Vector2( 0, 0 )
+50/shape_offset = Vector2( 0, 0 )
+50/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+50/shape_one_way = false
+50/shape_one_way_margin = 0.0
+50/shapes = [  ]
+50/z_index = 0
+51/name = "tileset_snow.png 51"
+51/texture = ExtResource( 7 )
+51/tex_offset = Vector2( 0, 0 )
+51/modulate = Color( 1, 1, 1, 1 )
+51/region = Rect2( 64, 64, 16, 16 )
+51/tile_mode = 0
+51/occluder_offset = Vector2( 0, 0 )
+51/navigation_offset = Vector2( 0, 0 )
+51/shape_offset = Vector2( 0, 0 )
+51/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+51/shape_one_way = false
+51/shape_one_way_margin = 0.0
+51/shapes = [  ]
+51/z_index = 0
+52/name = "tileset_snow.png 52"
+52/texture = ExtResource( 7 )
+52/tex_offset = Vector2( 0, 0 )
+52/modulate = Color( 1, 1, 1, 1 )
+52/region = Rect2( 16, 48, 32, 48 )
+52/tile_mode = 0
+52/occluder_offset = Vector2( 0, 0 )
+52/navigation_offset = Vector2( 0, 0 )
+52/shape_offset = Vector2( 0, 0 )
+52/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+52/shape_one_way = false
+52/shape_one_way_margin = 0.0
+52/shapes = [  ]
+52/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=54]
-points = PoolVector2Array( 1.04109, 14.7155, 2.00557, 14.2332, 5.38136, 7.96393, 6.82811, 13.2687, 7.79262, 12.7865, 10.6861, 6.99942, 13.5797, 12.7865 )
-
-[sub_resource type="ConvexPolygonShape2D" id=56]
-points = PoolVector2Array( 9.41069, 6.99942, 9.89293, 7.48169, 6.9994, 8.92844 )
-
-[sub_resource type="ConvexPolygonShape2D" id=74]
-points = PoolVector2Array( 9.25, 7.25, 16, 16, 9.25, 14.25, 0, 12.25, 1.25, 3.25, 14.25, 14.25, 0, 4.25 )
-
-[sub_resource type="TileSet" id=55]
-0/name = "spikes.png 0"
-0/texture = ExtResource( 6 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 42, 14, 0, 3 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "spikes.png 1"
-1/texture = ExtResource( 6 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 16, 16 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 54 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 54 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "spikes.png 2"
-2/texture = ExtResource( 6 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 25, 6, 0, 0 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "spikes.png 3"
-3/texture = ExtResource( 6 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 48, 0, 16, 16 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "cactus_spike.png 4"
-4/texture = ExtResource( 9 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 16, 16 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 56 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 56 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-4/z_index = 0
-5/name = "ice_spikes.png 5"
-5/texture = ExtResource( 15 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 0, 0, 16, 16 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 74 )
-5/shape_one_way = false
-5/shape_one_way_margin = 1.0
-5/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 74 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-5/z_index = 0
-6/name = "ice_spikes.png 6"
-6/texture = ExtResource( 15 )
-6/tex_offset = Vector2( 0, 0 )
-6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 16, 0, 16, 16 )
-6/tile_mode = 0
-6/occluder_offset = Vector2( 0, 0 )
-6/navigation_offset = Vector2( 0, 0 )
-6/shape_offset = Vector2( 0, 0 )
-6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape_one_way = false
-6/shape_one_way_margin = 0.0
-6/shapes = [  ]
-6/z_index = 0
-
-[sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 0.321569, 0.105882, 0.141176, 0.282353 )
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 210.703, 63.4276 )
 
 [node name="Mundo4" type="Node2D"]
 scale = Vector2( 1.75603, 1.6712 )
@@ -1106,57 +1221,9 @@ scale = Vector2( 1.75603, 1.6712 )
 [node name="ZonaCaida" type="Area2D" parent="."]
 script = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaCaida"]
-position = Vector2( 174.257, 186.094 )
-shape = SubResource( 57 )
-
-[node name="BlueSky" type="Sprite" parent="."]
-position = Vector2( 156.603, 66.4193 )
-scale = Vector2( 0.740306, 0.653223 )
+[node name="BlueSky" type="Sprite" parent="ZonaCaida"]
+position = Vector2( 137.811, 96.9363 )
 texture = ExtResource( 11 )
-
-[node name="MountainsA2" type="Sprite" parent="."]
-position = Vector2( 187.07, 56.8454 )
-scale = Vector2( 0.847526, 0.432405 )
-texture = ExtResource( 3 )
-
-[node name="TileMap" type="TileMap" parent="."]
-position = Vector2( -1.00001, 2.00001 )
-tile_set = SubResource( 49 )
-cell_size = Vector2( 16, 16 )
-collision_layer = 4
-format = 1
-tile_data = PoolIntArray( 196625, 26, 0, 262159, 39, 0, 262160, 39, 0, 327688, 30, 0, 327689, 30, 0, 2424880, 17, 0 )
-
-[node name="Penguin" parent="TileMap" instance=ExtResource( 17 )]
-position = Vector2( 24.3481, 54.8454 )
-
-[node name="Coins" parent="TileMap" instance=ExtResource( 16 )]
-position = Vector2( 10.6809, 118.273 )
-
-[node name="Coins2" parent="TileMap" instance=ExtResource( 16 )]
-position = Vector2( 45.9879, 102.117 )
-
-[node name="Coins3" parent="TileMap" instance=ExtResource( 16 )]
-position = Vector2( 186.077, 5.18046 )
-
-[node name="Coins" parent="TileMap/Coins3" instance=ExtResource( 16 )]
-position = Vector2( -1.13893, 93.3461 )
-
-[node name="Coins2" parent="TileMap/Coins3" instance=ExtResource( 16 )]
-position = Vector2( 62.0718, 115.486 )
-
-[node name="Coins4" parent="TileMap" instance=ExtResource( 16 )]
-position = Vector2( 253.843, 48.8616 )
-
-[node name="PauseMenu" parent="TileMap" instance=ExtResource( 19 )]
-margin_left = 120.018
-margin_top = 265.472
-margin_right = 120.018
-margin_bottom = 265.472
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 138.95, 70.0096 )
 
 [node name="Spike" type="Area2D" parent="."]
 
@@ -1229,6 +1296,66 @@ limit_left = 0
 limit_top = 0
 limit_right = 520
 limit_bottom = 600
+
+[node name="MountainsA" type="Sprite" parent="."]
+position = Vector2( 148.631, 28.7219 )
+scale = Vector2( 1.19899, 0.673068 )
+texture = ExtResource( 3 )
+
+[node name="Clouds" type="Sprite" parent="."]
+position = Vector2( 154.325, 99.3298 )
+scale = Vector2( 1.27685, 1.44207 )
+texture = ExtResource( 18 )
+
+[node name="Trees" type="Sprite" parent="."]
+position = Vector2( 155.464, 56.1754 )
+scale = Vector2( 1.27685, 1.51575 )
+texture = ExtResource( 21 )
+
+[node name="Penguin" parent="." instance=ExtResource( 17 )]
+position = Vector2( 39.2932, 87.9607 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 138.95, 70.0096 )
+
+[node name="PauseMenu" parent="." instance=ExtResource( 19 )]
+margin_left = 130.977
+margin_top = 109.502
+margin_right = 154.977
+margin_bottom = 126.502
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -1.00001, 2.00001 )
+tile_set = SubResource( 49 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 4
+format = 1
+tile_data = PoolIntArray( 6, 48, 0, 14, 48, 0, 131071, 48, 0, 65538, 48, 0, 65542, 30, 0, 65543, 30, 0, 65544, 30, 0, 65549, 45, 0, 65550, 47, 0, 65553, 48, 0, 131080, 48, 0, 196610, 30, 0, 196611, 30, 0, 196612, 30, 0, 196613, 30, 0, 196618, 30, 0, 196619, 30, 0, 196620, 30, 0, 196625, 26, 0, 262159, 39, 0, 262160, 39, 0, 327687, 30, 0, 327688, 30, 0, 327689, 30, 0, 393218, 30, 0, 393219, 30, 0, 393220, 30, 0, 524288, 31, 0, 524290, 37, 0, 524300, 37, 0, 524304, 33, 0, 524305, 28, 0, 524306, 28, 0, 524307, 32, 0, 589824, 33, 0, 589825, 28, 0, 589826, 29, 0, 589830, 27, 0, 589831, 29, 0, 589834, 33, 0, 589835, 30, 0, 589840, 42, 0, 589841, 34, 0, 589842, 34, 0, 589843, 43, 0, 655360, 52, 0, 655361, 34, 0, 655362, 43, 0, 655370, 52, 0, 655372, 43, 0, 655377, 34, 0, 655378, 34, 0, 720896, 51, 0, 720897, 50, 0, 720898, 49, 0, 720912, 50, 0, 720913, 50, 0, 720914, 50, 0, 720915, 50, 0, 2424880, 17, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 154.895, 219.004 )
+shape = SubResource( 57 )
+
+[node name="Coins" parent="CollisionShape2D" instance=ExtResource( 16 )]
+position = Vector2( -140.658, -89.7558 )
+
+[node name="Coins2" parent="CollisionShape2D" instance=ExtResource( 16 )]
+position = Vector2( -113.893, -182.504 )
+
+[node name="Coins3" parent="CollisionShape2D" instance=ExtResource( 16 )]
+position = Vector2( -23.3481, -206.438 )
+
+[node name="Coins4" parent="CollisionShape2D" instance=ExtResource( 16 )]
+position = Vector2( -50.113, -89.1575 )
+
+[node name="Coins5" parent="CollisionShape2D" instance=ExtResource( 16 )]
+position = Vector2( 26.7649, -83.7721 )
+
+[node name="Coins6" parent="CollisionShape2D" instance=ExtResource( 16 )]
+position = Vector2( 95.6703, -166.946 )
+
+[node name="Coins7" parent="CollisionShape2D" instance=ExtResource( 16 )]
+position = Vector2( 142.936, -113.092 )
 
 [connection signal="body_entered" from="ZonaCaida" to="ZonaCaida" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Spike" to="Player" method="_on_Spike_body_entered"]
