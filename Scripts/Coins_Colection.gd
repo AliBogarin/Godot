@@ -12,12 +12,15 @@ func _ready():
 	heart3 = get_node("Heart3")
 	
 	$Coins_Colection_text.text = String(coins_count)
+
+	
+
 	
 func handelCoinCollected():
 	print("Coin collected")
-	
 	coins_count += 1
 	$Coins_Colection_text.text = String(coins_count)
+	
 	
 	if coins_count == 3: 
 		#para cambiar de escena esta es la condicion

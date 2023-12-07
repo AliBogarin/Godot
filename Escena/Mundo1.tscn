@@ -586,7 +586,7 @@ position = Vector2( 245, 192 )
 shape = SubResource( 34 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 225, 192 )
+position = Vector2( 173, 224 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 28, -42 )
@@ -631,9 +631,6 @@ position = Vector2( 28, 197 )
 [node name="Coins4" parent="Coins" instance=ExtResource( 2 )]
 position = Vector2( 408, -132 )
 
-[node name="Coins3" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 125, 17 )
-
 [node name="Coins5" parent="Coins" instance=ExtResource( 2 )]
 position = Vector2( 233, -92 )
 
@@ -645,10 +642,13 @@ scale = Vector2( 0.99891, 1.0036 )
 position = Vector2( 257, -146 )
 scale = Vector2( 0.99891, 1.0036 )
 
+[node name="Coins6" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 54, -16 )
+
+[node name="Coins3" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 122, 17 )
+
 [node name="Coins2" parent="Coins" instance=ExtResource( 2 )]
 position = Vector2( 174, -24 )
-
-[node name="Coins6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 82, 181 )
 
 [connection signal="body_entered" from="Caida" to="Caida" method="_on_Area2D_body_entered"]
