@@ -15,6 +15,7 @@ func _ready():
 	
 func handelCoinCollected():
 	print("Coin collected")
+	
 	coins_count += 1
 	$Coins_Colection_text.text = String(coins_count)
 	

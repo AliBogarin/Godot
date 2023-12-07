@@ -633,11 +633,9 @@ position = Vector2( 408, -132 )
 
 [node name="Coins3" parent="Coins" instance=ExtResource( 2 )]
 position = Vector2( 125, 17 )
-scale = Vector2( 1, 1 )
 
 [node name="Coins5" parent="Coins" instance=ExtResource( 2 )]
 position = Vector2( 233, -92 )
-scale = Vector2( 1, 1 )
 
 [node name="Coins" parent="Coins" instance=ExtResource( 2 )]
 position = Vector2( 404, 15.0001 )
