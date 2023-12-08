@@ -17,7 +17,4 @@ func _on_QuitButton_pressed():
 	
 
 
-
-
-func _on_Instructions_toggled(button_pressed):
 	

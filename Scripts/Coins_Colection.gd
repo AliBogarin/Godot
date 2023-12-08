@@ -5,7 +5,7 @@ var coins_count = 0
 var heart1
 var heart2	
 var heart3
-var coins_required_for_next_level = 3
+
 
 func _ready():
 	heart1 = get_node("Heart1")
@@ -16,33 +16,39 @@ func _ready():
 
 	
 
-	
-func handelCoinCollected():
+	"""	
+	func handelCoinCollected():
 	print("Coin collected")
 	coins_count += 1
 	$Coins_Colection_text.text = String(coins_count)
 	
 
-	"""
+	
 	if coins_count == 3: 
 		#para cambiar de escena esta es la condicion
 		#get_tree().change_scene("res://Escena/Mundo2.tscn")
 	# cogere el nombre y su numero y lo comvirto a int, así me da el número, asi puedo ir a numeros infinito de mundos
 		yield(get_tree().create_timer(0.1),"timeout")
 		get_tree().change_scene("res://Escena/Mundo" + str(int(get_tree().current_scene.name)+1)+".tscn")
-	"""
-
 	
-	if coins_count > coins_required_for_next_level:
 		
-		#para cambiar de escena esta es la condicion
-		#get_tree().change_scene("res://Escena/Mundo2.tscn")
-	# cogere el nombre y su numero y lo comvirto a int, así me da el número, asi puedo ir a numeros infinito de mundos
+		
+		if get_tree().change_scene("res://Escena/Mundo" + str(int(get_tree().current_scene.name)+1)+".tscn") ==4:
+			get_tree().change_scene("res://Escena/Menu.tscn")
+			"""
+func handelCoinCollected():
+	print("Coin collected")
+	coins_count += 1
+	$Coins_Colection_text.text = String(coins_count)
+			
+	if coins_count == 6: 
 		yield(get_tree().create_timer(0.1),"timeout")
-		get_tree().change_scene("res://Escena/Mundo" + str(int(get_tree().current_scene.name)+1)+".tscn")
-		coins_required_for_next_level= coins_required_for_next_level + 3
-		
-
+		var next_scene = int(get_tree().current_scene.name) + 1
+		if next_scene <= 4:
+			get_tree().change_scene("res://Escena/Mundo" + str(next_scene) + ".tscn")
+		else:
+			get_tree().change_scene("res://Escena/Menu.tscn")
+			
 func handleHearts(var lifes):
 		if lifes == 0:
 			heart1.visible = false
