@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Escena/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escena/Saw.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Enemies/cactus.png" type="Texture" id=19]
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Objects/heart.png" type="Texture" id=20]
 [ext_resource path="res://Escena/PauseMenu.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Sounds/laserd.wav" type="AudioStream" id=22]
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
 points = PoolVector2Array( 96, 32, 0, 32, 0, 0, 96, 0 )
@@ -1062,6 +1063,9 @@ script = ExtResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaCaida"]
 position = Vector2( 248, 324.125 )
 shape = SubResource( 34 )
+
+[node name="FallenSound" type="AudioStreamPlayer" parent="ZonaCaida"]
+stream = ExtResource( 22 )
 
 [node name="Spike" type="Area2D" parent="."]
 position = Vector2( 195, 22 )

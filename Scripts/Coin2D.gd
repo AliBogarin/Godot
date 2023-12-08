@@ -10,7 +10,7 @@ func _on_Coin2D_body_entered(body):
 		body.add_Coin()
 		$Sound.playing = true
 		# Esperar a que termine la reproducción antes de liberar el nodo
-		yield(get_tree().create_timer(0.2),"timeout")
+		yield(get_tree().create_timer(0.1),"timeout")
 	
 		emit_signal("coins_collector")
 		
