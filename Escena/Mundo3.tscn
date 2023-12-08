@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Escena/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escena/Saw.tscn" type="PackedScene" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Objects/heart.png" type="Texture" id=20]
 [ext_resource path="res://Escena/PauseMenu.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Sounds/laserd.wav" type="AudioStream" id=22]
+[ext_resource path="res://Sounds/Jungle trail bpm90 C Example Background.wav" type="AudioStream" id=23]
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
 points = PoolVector2Array( 96, 32, 0, 32, 0, 0, 96, 0 )
@@ -983,7 +984,7 @@ cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 16, 0, 0, 16, 0, 0 )
 collision_layer = 4
 format = 1
-tile_data = PoolIntArray( 65536, 39, 0, 65537, 39, 0, 65538, 39, 0, 65544, 39, 0, 65558, 39, 0, 65559, 39, 0, 65560, 39, 0, 131085, 39, 0, 131086, 39, 0, 131087, 39, 0, 262146, 25, 0, 262147, 25, 0, 262170, 25, 0, 262171, 25, 0, 393217, 39, 0, 393233, 25, 0, 393234, 25, 0, 393235, 25, 0, 393237, 25, 0, 458775, 39, 0, 524291, 25, 0, 524292, 25, 0, 524293, 25, 0, 524294, 25, 0, 524295, 25, 0, 524301, 25, 0, 524302, 25, 0, 524315, 25, 0, 720897, 39, 0, 720898, 39, 0, 720915, 25, 0, 720916, 25, 0, 720917, 25, 0, 786447, 25, 0, 786451, 39, 0, 786460, 39, 0, 851978, 26, 0, 851979, 26, 0, 851980, 26, 0, 917510, 30, 0, 917511, 31, 0, 983053, 39, 0, 983062, 30, 0, 983063, 32, 0, 983070, 30, 0, 983071, 28, 0, 1048576, 29, 0, 1048577, 29, 0, 1048578, 29, 0, 1048580, 32, 0, 1048598, 37, 0, 1048599, 38, 0, 1048604, 27, 0, 1048605, 29, 0, 1114112, 37, 0, 1114113, 36, 0, 1114114, 36, 0, 1114115, 35, 0, 1114116, 38, 0, 1114140, 37, 0, 1114141, 36, 0, 1114142, 36, 0, 1114143, 37, 0, 1179649, 35, 0, 1179650, 36, 0, 1179651, 35, 0, 1179676, 37, 0, 1179677, 36, 0, 1179678, 36, 0, 1179679, 36, 0, 1245213, 36, 0, 1245214, 36, 0, 1245215, 36, 0 )
+tile_data = PoolIntArray( 65536, 39, 0, 65537, 39, 0, 65538, 39, 0, 65544, 39, 0, 65558, 39, 0, 65559, 39, 0, 65560, 39, 0, 131085, 39, 0, 131086, 39, 0, 131087, 39, 0, 262146, 25, 0, 262147, 25, 0, 262170, 25, 0, 262171, 25, 0, 393217, 39, 0, 393233, 25, 0, 393234, 25, 0, 393235, 25, 0, 393237, 25, 0, 458775, 39, 0, 524291, 25, 0, 524292, 25, 0, 524293, 25, 0, 524294, 25, 0, 524295, 25, 0, 524301, 25, 0, 524302, 25, 0, 524315, 25, 0, 589835, 26, 0, 720897, 39, 0, 720898, 39, 0, 720915, 25, 0, 720916, 25, 0, 720917, 25, 0, 786447, 25, 0, 786451, 39, 0, 786460, 39, 0, 851978, 26, 0, 851979, 26, 0, 851980, 26, 0, 917510, 30, 0, 917511, 31, 0, 983053, 39, 0, 983062, 30, 0, 983063, 32, 0, 983070, 30, 0, 983071, 28, 0, 1048576, 29, 0, 1048577, 29, 0, 1048578, 29, 0, 1048580, 32, 0, 1048598, 37, 0, 1048599, 38, 0, 1048604, 27, 0, 1048605, 29, 0, 1114112, 37, 0, 1114113, 36, 0, 1114114, 36, 0, 1114115, 35, 0, 1114116, 38, 0, 1114140, 37, 0, 1114141, 36, 0, 1114142, 36, 0, 1114143, 37, 0, 1179649, 35, 0, 1179650, 36, 0, 1179651, 35, 0, 1179676, 37, 0, 1179677, 36, 0, 1179678, 36, 0, 1179679, 36, 0, 1245213, 36, 0, 1245214, 36, 0, 1245215, 36, 0 )
 
 [node name="PauseMenu" parent="TileMap" instance=ExtResource( 21 )]
 margin_left = 179.0
@@ -1025,8 +1026,9 @@ position = Vector2( 10, 11 )
 texture = ExtResource( 8 )
 hframes = 6
 
-[node name="Heart1" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 56, 13 )
+[node name="Heart3" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 84.5, 13 )
+scale = Vector2( 1.0625, 1 )
 texture = ExtResource( 20 )
 hframes = 3
 
@@ -1035,9 +1037,8 @@ position = Vector2( 70, 13 )
 texture = ExtResource( 20 )
 hframes = 3
 
-[node name="Heart3" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 84.5, 13 )
-scale = Vector2( 1.0625, 1 )
+[node name="Heart1" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 56, 13 )
 texture = ExtResource( 20 )
 hframes = 3
 
@@ -1092,7 +1093,7 @@ position = Vector2( 35, 248 )
 texture = ExtResource( 15 )
 
 [node name="Saw" parent="Spike" instance=ExtResource( 2 )]
-position = Vector2( -1, 37 )
+position = Vector2( -3, 29 )
 
 [node name="Coins" parent="." instance=ExtResource( 13 )]
 position = Vector2( 49, 236 )
@@ -1114,6 +1115,10 @@ position = Vector2( 463, 232 )
 
 [node name="Coins7" parent="." instance=ExtResource( 13 )]
 position = Vector2( 191, 194 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+autoplay = true
 
 [connection signal="body_entered" from="ZonaCaida" to="ZonaCaida" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Spike" to="Player" method="_on_Spike_body_entered"]

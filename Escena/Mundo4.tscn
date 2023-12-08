@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Escena/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/tree.png" type="Texture" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/bush.png" type="Texture" id=25]
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/clouds.png" type="Texture" id=26]
 [ext_resource path="res://Rocky Roads (1)/Rocky Roads/Deco/tree_b.png" type="Texture" id=27]
+[ext_resource path="res://Sounds/Jungle trail bpm90 C Example Background.wav" type="AudioStream" id=28]
 
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0.321569, 0.105882, 0.141176, 0.282353 )
@@ -1281,7 +1282,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 56/shapes = [  ]
 56/z_index = 0
 
-[node name="Mundo3" type="Node2D"]
+[node name="Mundo4" type="Node2D"]
 
 [node name="BlueSky" type="Sprite" parent="."]
 position = Vector2( 282, 164 )
@@ -1303,8 +1304,11 @@ position = Vector2( 1.37649, 35.0578 )
 scale = Vector2( 1.03689, 1 )
 texture = ExtResource( 24 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 263, 144 )
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 241, 151 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 22, -7 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
@@ -1314,9 +1318,6 @@ limit_bottom = 600
 drag_margin_v_enabled = true
 smoothing_enabled = true
 smoothing_speed = 4.0
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 241, 151 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enable = true
@@ -1466,6 +1467,10 @@ texture = ExtResource( 15 )
 
 [node name="Coins" parent="TileMap" instance=ExtResource( 13 )]
 position = Vector2( 346, 107 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+autoplay = true
 
 [connection signal="body_entered" from="ZonaCaida" to="ZonaCaida" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Spike" to="Player" method="_on_Spike_body_entered"]

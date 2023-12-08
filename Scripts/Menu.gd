@@ -14,4 +14,10 @@ func _on_StartButton_pressed():
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
+	
 
+
+
+
+func _on_Instructions_toggled(button_pressed):
+	
